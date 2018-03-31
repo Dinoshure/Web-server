@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html id = "html">
+    <head>
+        <title>Youtube Playlist Randomizer</title>
+        <meta charset = "utf-8">
+        <meta name="description" content="Want to randomize the order of a YouTube playlist? Then look no further! Welcome to SuffleTube. This tool makes it easy to randomize any YouTube playlist.">
+        
+        <link rel = "stylesheet" href="css/style.css">
+        <link rel = "stylesheet" href="css/stylesheet.css">
+    </head>
+    <body onresize = "responsive();" onscroll = "resizeHeader();">
+        <div class = "header" id = "header">
+            <div class = "header-cont" id = "header-cont" href = "/">
+                <img src = "assets/logo.png" id = "header-logo">
+                <h1 id = "header-title">S h u f f l e T u b e</h1>
+            </div>
+        </div>
+        
+        <div class = "add-url">
+            <h1 id = "addURLh1">ENTER THE PLAYLIST URL HERE</h1>
+            <input id = "url" type = "text">
+            <button id = "btnGetVideos" onclick = "loadAPI(); setCookie('PLID', document.getElementById('url').value, 365); getVideos(document.getElementById('url').value);">SHUFFLE!</button>
+        </div>
+        
+        <div class = "video-area" id = "video-area">
+            <div id = "player"></div>
+            <div id = "controls" class = "controls">
+                <button id = "playPrev" onclick = "playPrev();">◀ Play Previous</button>
+                <button id = "playNext" style = "text-align: right; padding-left: 20px; padding-right: 20px; right: 0%;" onclick = "playNext();">Play Next ▶</button>
+            </div>
+            <h1 id = "up-next"></h1>
+        </div>
+        
+        <div class = "video-list-cont">
+            <div class = "video-list-main">
+                <div class = "video-list-header">
+                    <h1>VIDEOS IN PLAYLIST:</h1>
+                </div>
+                
+                <div class = "video-list" id = "video-list"></div>
+            </div>
+        </div>
+        
+        <script src = "js/script.js"></script>
+    </body>
+</html>        

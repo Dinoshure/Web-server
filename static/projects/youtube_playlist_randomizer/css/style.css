@@ -1,0 +1,254 @@
+body {
+    margin: 0;
+    overflow-x: hidden;
+    background-color: #ffcc5c;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+ /* Generated at: https://darrylhuffman.com/sites/Scrollbar-gen/ */
+::-webkit-scrollbar-button{display: none;}
+::-webkit-scrollbar-thumb{background-color: #ff6f69;}
+::-webkit-scrollbar-thumb:hover{background-color: #f2605b;}
+::-webkit-scrollbar-track{background-color: #151517;}
+::-webkit-scrollbar-track:hover{background-color: #0f0f10;}
+::-webkit-scrollbar{width: 13px;}
+
+.header {
+    width: 100%;
+    height: 160px;
+    position: fixed;
+    background-color: #151517;
+    z-index: 999;
+}
+
+.header-cont {
+    width: 750px;
+    height: 160px;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.header h1 {
+    position: absolute;
+    display: inline-block;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: titleFont;
+    font-size: 50px;
+    color: #ffeead;
+    padding: 0;
+    margin: 0;
+}
+
+@media only screen and (max-width: 750px) {
+    .header img {
+        display: none !important; 
+    }
+}
+
+@media only screen and (max-width: 375px) {
+    .header img {
+        display: inline-block !important;
+        transform: translate(-50%, -50%) !important;
+        left: 50% !important;
+    }
+    
+    .header h1 {
+        display: none !important;
+    }
+}
+
+.header img {
+    position: absolute;
+    display: inline-block;
+    width: 130px;
+    top: 50%;
+    left: 35%;
+    transform: translate(-200%, -50%);
+}
+
+.add-url {
+    position: absolute;
+    width: 100%;
+    height: 500px;
+    margin-top: 180px;
+}
+
+.add-url h1 {
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: titleFont;
+    color: #ff6f69;
+    font-size: 50px;
+}
+
+.add-url input[type=text] {
+    position: absolute;
+    width: 700px;
+    height: 30px;
+    border: none;
+    border-radius: 500px;
+    background-color: #fff;
+    color: #151517;
+    font-size: 20px;
+    font-family: inputFont;
+    padding-left: 10px;
+    padding-right: 10px;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.add-url input:focus {
+    outline: none;
+}
+
+.add-url button {
+    position: absolute;
+    top: 38%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    height: 70px;
+    background-color: #ff6f69;
+    border-radius: 500px;
+    border: none;
+    color: #fff;
+    font-family: titleFont;
+    font-size: 50px;
+}
+
+@media only screen and (max-width: 410px) {
+    .add-url button {
+        font-size: 35px !important; 
+    }
+}
+
+.add-url button:focus {
+    outline: none;
+}
+
+.add-url button:hover {
+    background-color: #f2605b;
+}
+
+.video-area {
+    position: absolute;
+    width: 100%;
+    height: 360px;
+    margin-top: 450px;
+}
+
+.video-area #player {
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+}
+
+.video-area h1 {
+    position: absolute;
+    top: 120%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: titleFont;
+    color: #ff6f69;
+    font-size: 45px;
+    white-space: nowrap
+}
+
+.controls {
+    display: none;
+    position: absolute;
+    width: 640px;
+    height: 30px;
+    background-color: #ff6f69;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+}
+
+.controls button {
+    position: absolute;
+    width: auto;
+    height: 30px;
+    line-height: 30px;
+    font-family: inputFont;
+    font-size: 20px;
+    color: #fff;
+    padding-left: 20px;
+    border: none;
+    padding-right: 20px;
+    text-align: left;
+    background-color: #ff6f69;
+}
+
+.controls button:focus {
+    outline: none;
+}
+
+.controls button:hover {
+    background-color: #f2605b;
+}
+
+.video-list-cont {
+    position: absolute;
+    width: 100%;
+    height: 900px;
+    margin-top: 1000px !important;
+}
+
+.video-list-main {
+    position: relative;
+    width: 1000px;
+    height: 900px;
+    left: 50%;
+    top: 0%;
+    transform: translate(-50%, 0%);
+    background-color: #ffeead;
+    border: solid 8px #151517;
+}
+
+.video-list {
+    position: relative;
+    width: 700px;
+    top: 15%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    height: auto;
+    max-height: 600px;
+    overflow-y: auto;
+    text-align: left;
+    line-height: 25px;
+}
+
+.video-list a {
+    text-decoration: none;
+    font-family: inputFont;
+    color: #151517;
+    display: block;
+    font-weight: bold;
+}
+
+.video-list-header {
+    position: relative;
+    width: 700px;
+    height: 35px;
+    top: 8%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    text-align: left;
+}
+
+.video-list-header h1 {
+    color: #ff6f69;
+    font-family: titleFont;
+    font-size: 42px;
+}

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Dinoshure Labs - 10 PRINT</title>
+        <meta charset="utf-8">
+
+        <style>
+            body {
+                overflow: hidden;
+                margin: 0;
+            }
+        </style>
+    </head>
+    <body>
+        <canvas id = "canvas" style = "background: #000;"></canvas>
+
+        <script>
+            const c = document.getElementById("canvas");
+            c.width = window.innerWidth;
+            c.height = window.innerHeight;
+
+            const ctx = c.getContext("2d");
+            ctx.strokeStyle = "#fff";
+            ctx.lineWidth = 2;
+
+            let col;
+
+            let spacing = window.innerWidth / 50;
+            let x = 0;
+            let y = 0;
+            let iterations = 0;
+
+            function run() {
+                hue = map(x, 0, window.innerWidth, 0, 360) - map(y, 0, window.innerHeight, 0, 360);
+                col = "hsl(" + hue + ", 100%, 50%)"
+
+                if(Math.round(Math.random()) == 0) {
+                    drawLine(x, y + spacing, x + spacing, y, col);
+                } else {
+                    drawLine(x, y, x + spacing, y + spacing, col);
+                }
+
+                x += spacing;
+
+                if(x >= window.innerWidth) {
+                    x = 0;
+                    y += spacing;
+                }
+
+
+
+                if(y <= window.innerHeight) {
+                    setTimeout(run, 1);
+                } else {
+                    y = 0;
+                    x = 0;
+                }
+            }
+
+            window.onclick = function() {
+                window.location.reload();
+            }
+
+            function map(val, a, b, a2, b2) {
+                let ratio = (b2 - a2)  / (b - a);
+                return val * ratio;
+            }
+
+            function drawLine(x, y, x2, y2, col) {
+                ctx.beginPath();
+                ctx.moveTo(x, y);
+                ctx.lineTo(x2, y2);
+                ctx.strokeStyle = col;
+                ctx.stroke();
+            }
+
+            run();
+        </script>
+    </body>
+</html>

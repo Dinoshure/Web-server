@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Error: 404</title>
+        <link rel = "icon" href = "/assets/favicon.ico">
+        <meta charset="utf-8">
+        
+        <link rel="stylesheet" href="/404/css/stylesheet.css">
+        <link rel="stylesheet" href="/404/css/style.css">
+    </head>
+    <body>
+        <div class="sad-face">
+            <span>:(</span>
+        </div>
+        <div class="main-info">
+            <span>Your browser ran into a problem and needs to reload. We're just collecting some error info, and then we'll reload for you. (</span><span id='percent'>0</span><span>%</span>
+            <span>complete)</span>
+        </div>
+        </div>
+        <div class="error-info">
+            If you'd like to know more, you can search online later for this error: ERR_NOT_FOUND
+        </div>
+        
+        <script>
+            var percent = document.getElementById("percent");
+            var number = 0;
+            var r;
+            
+            function addNumber() {
+                r = Math.floor((Math.random() * 500) + 10);
+                
+                setTimeout(function() {
+                    percent.innerHTML = number;
+                    number++;
+                    if(number < 101) {
+                        addNumber();
+                    } else {
+                        window.location.replace("127.0.0.1:8000");
+                    }
+                }, r);
+            }
+            
+            addNumber()
+        </script>
+    </body>
+</html>

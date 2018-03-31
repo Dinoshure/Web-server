@@ -1,13 +1,81 @@
 <!DOCTYPE html>
-<html>
+<html id = "html">
     <head>
-        <title>Dinoshure Labs</title>
+        <title>Dinoshure Labs!</title>
         <meta charset="utf-8">
         
         <link rel = "icon" href = "favicon.ico">
-        <link rel = "stylesheet" href = "style.css">
+        <link rel = "stylesheet" href = "/css/style.css">
+        <link rel = "stylesheet" href = "/css/fonts/dylangothic.css">
+        <link rel = "stylesheet" href = "/css/fonts/goldoni.css">
+        <link rel = "stylesheet" href = "/css/fonts/bebas.css">
+        <link rel = "stylesheet" href = "/css/fonts/geosans.css">
+        
     </head>
-    <body>
-        <span>Hello, is this working?</span>
+    <body id = "body" onscroll = "scrollAnimations()">
+        <div id = "header">
+            <div class = "header-button" id = "button-home">
+                    Home
+            </div>
+            <div class = "header-button" id = "button-projects">
+                    Games
+            </div>
+            <div class = "header-button" id = "button-games">
+                    Projects
+            </div>
+            <div class = "header-button" id = "button-about">
+                    About
+            </div>
+        </div>
+        
+        <div class = "main-bg">
+            <div class = "main-text" id = "main-title">
+                - WHAT IS THE POINT OF THIS WEBSITE? -
+            </div>
+            <div class = "main-text">
+                This website is for me to test out different things and improve on my website development skills. Here are a few of my projects, take a look!
+            </div>
+            
+            <div class = "thumb-wrapper">
+                <div class = "thumb-text">
+                    - CLASSIC GAMES -
+                </div>
+                <img src = "/assets/thumbs/thumb_games.svg">
+                <div class = "thumb-text" id = "thumb-info">
+                    Games from the good old days such as Snake, Pacman and any other I conclude to benefit me in terms of programming.
+                </div>
+            </div>
+            <div class = "thumb-wrapper">
+                <div class = "thumb-text">
+                    - LITTLE PROJECTS -
+                </div>
+                <img src = "/assets/thumbs/thumb_projects.svg">
+                <div class = "thumb-text" id = "thumb-info">
+                    Random projects that I code for fun. Preety much everything I will ever do will be in here. It will be like a stream of my consciousness.
+                </div>
+            </div>
+            <div class = "thumb-wrapper" id = "resize">
+                <div class = "thumb-text">
+                    - ABOUT ME -
+                </div>
+                <img src = "/assets/thumbs/thumb_about.svg">
+                <div class = "thumb-text" id = "thumb-info">
+                    Cool, this is the end of the site
+                </div>
+            </div>
+        </div>
+        
+        <div class = "footer"></div>
+        
+        <div id = "background" data-stellar-background-ratio="0.25">
+            <div id = "bg-title"></div>
+        </div>
+        
+        <script src = "js/index.js"></script>
+        <script src = "http://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+        <script src = "js/lib/jquery.stellar.js"></script>
+        <script>
+            $.stellar();
+        </script>
     </body>
 </html>

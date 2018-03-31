@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Dinoshure Labs - Snake</title>
+        <meta charset = "utf-8">
+        
+        <link rel = "icon" href = "/assets/favicon.ico">
+        <link rel = "stylesheet" href = "css/stylesheet.css">
+        <link rel = "stylesheet" href="css/style.css">
+        
+        <script src = "/js/lib/p5.min.js"></script>
+        <script src = "/js/lib/p5.dom.js"></script>
+        <script src = "js/sketch.js"></script>
+    </head>
+    <body>
+        <div class = "header">
+            <div class = "header-text">
+                <span>Snake</span><span id = "blink">_</span>
+            </div>
+        </div>
+            
+        <div class = "main-wrapper">
+            <div class = "img-wrapper">
+                <div class = "img-box">
+                    <img src = "assets/snake.png">
+                </div>
+            </div>
+            <div class = "img-wrapper right">
+                <div class = "img-box right">
+                    <img src = "assets/snake.png">
+                </div>
+            </div>
+        </div>       
+        
+        <script>
+            var blinkCount = 0
+            setInterval(function() {
+                cursor = document.getElementById("blink");
+                if(blinkCount % 2 === 0) {
+                    cursor.style.visibility = "hidden";
+                } else {
+                    cursor.style.visibility = "visible";
+                }
+                blinkCount++
+            }, 500)
+        </script>
+    </body>
+</html>
