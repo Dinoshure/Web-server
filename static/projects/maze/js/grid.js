@@ -1,13 +1,14 @@
 const c = document.getElementById("canvas");
 const size = Math.round(window.innerHeight) - 20;
-c.width = size;
-c.height = size;
+c.width = window.innerWidth;
+c.height = window.innerHeight;
 const ctx = c.getContext("2d");
 ctx.strokeStyle = "#fff";
 
-let rows = 50;
-let cols = 50;
-let w = size / cols;
+let w = 50;
+let rows = Math.floor(window.innerHeight / w);
+let cols = Math.floor(window.innerWidth / w);
+
 let cells = [];
 
 for (i = 0; i < rows; i++) {

@@ -13,7 +13,7 @@ function show() {
     ctx.fillStyle = "#00ff00";
     ctx.fillRect(cells[0][0].x, cells[0][0].y, w, w);
     ctx.fillStyle = "#ff0000";
-    ctx.fillRect(cells[cells.length - 1][cells.length - 1].x, cells[cells.length - 1][cells.length - 1].y, w, w);
+    ctx.fillRect(cells[cells.length - 1][cells[cells.length - 1].length - 1].x, cells[cells.length - 1][cells.length - 1].y, w, w);
   }
 }
 
