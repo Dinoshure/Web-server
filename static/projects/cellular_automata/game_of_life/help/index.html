@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Game of Life Help</title>
+    <meta charset="utf-8" />
+  </head>
+  <body>
+    <h1>Game of Life commands</h1>
+    <h2>Press a key to spawn its corresponding object</h2>
+    <h3>Gliders :</h3>
+    <p>"G" - Glider</p>
+    <p>"S" - Glider Gun</p>
+    <h3>Spaceships :</h3>
+    <p>"L" - Simple Spaceship</p>
+    <p>"B" - Bat Spaceship</p>
+    <h3>Misc :</h3>
+    <p>"P" - Pulsar</p>
+    <p>"R" - Random</p>
+    <h3>Webpages :</h3>
+    <p>"H" - Help</p>
+    <p>"D" - Drawer</p>
+    <p>"B" - Game of Life</p>
+  </body>
+
+  <script>
+    window.addEventListener("keydown", function(e) {
+      let key = e.keyCode;
+
+      if (key == 66) {
+        //b
+        window.location.replace("http://localhost:8000/projects/cellular_automata/game_of_life/");
+      }
+
+      if(key == 68) {
+        //d
+        window.location.replace("http://localhost:8000/projects/cellular_automata/game_of_life/drawer/");
+      }
+    });
+  </script>
+</html>

@@ -36,14 +36,6 @@ function Cell(i, j) {
   }
 }
 
-// for (i = 0; i < cells.length; i++) {
-//   for (j = 0; j < cells[i].length; j++) {
-//     if (Math.random() > 0.8) {
-//       cells[i][j].alive = true;
-//     }
-//   }
-// }
-
 let mX = 0;
 let mY = 0;
 
@@ -51,6 +43,16 @@ window.addEventListener("keydown", function(e) {
   let key = e.keyCode;
   if (key == 13) {
     start = true;
+  }
+
+  if (key == 72) {
+    //h
+    window.location.replace("http://localhost:8000/projects/cellular_automata/game_of_life/help/");
+  }
+
+  if (key == 68) {
+    //d
+    window.location.replace("http://localhost:8000/projects/cellular_automata/game_of_life/drawer/");
   }
 
   if (key == 71) {
@@ -165,52 +167,6 @@ window.addEventListener("keydown", function(e) {
     cells[y + 13][x + 26].alive = true;
     cells[y + 13][x + 28].alive = true;
   }
-  if (key == 73) {
-    //i
-    x = ~~(mX / squareSize);
-    y = ~~(mY / squareSize);
-
-    cells[y + 0][x + 3].alive = true;
-    cells[y + 1][x + 2].alive = true;
-    cells[y + 1][x + 3].alive = true;
-    cells[y + 1][x + 4].alive = true;
-    cells[y + 2][x + 1].alive = true;
-    cells[y + 2][x + 2].alive = true;
-    cells[y + 2][x + 4].alive = true;
-    cells[y + 2][x + 5].alive = true;
-    cells[y + 3][x + 0].alive = true;
-    cells[y + 3][x + 1].alive = true;
-    cells[y + 3][x + 2].alive = true;
-    cells[y + 3][x + 4].alive = true;
-    cells[y + 3][x + 5].alive = true;
-    cells[y + 3][x + 6].alive = true;
-    cells[y + 4][x + 0].alive = true;
-    cells[y + 4][x + 1].alive = true;
-    cells[y + 4][x + 2].alive = true;
-    cells[y + 4][x + 4].alive = true;
-    cells[y + 4][x + 5].alive = true;
-    cells[y + 4][x + 6].alive = true;
-    cells[y + 5][x + 0].alive = true;
-    cells[y + 5][x + 1].alive = true;
-    cells[y + 5][x + 2].alive = true;
-    cells[y + 5][x + 4].alive = true;
-    cells[y + 5][x + 5].alive = true;
-    cells[y + 5][x + 6].alive = true;
-    cells[y + 6][x + 0].alive = true;
-    cells[y + 6][x + 1].alive = true;
-    cells[y + 6][x + 2].alive = true;
-    cells[y + 6][x + 4].alive = true;
-    cells[y + 6][x + 5].alive = true;
-    cells[y + 6][x + 6].alive = true;
-    cells[y + 7][x + 1].alive = true;
-    cells[y + 7][x + 2].alive = true;
-    cells[y + 7][x + 4].alive = true;
-    cells[y + 7][x + 5].alive = true;
-    cells[y + 8][x + 2].alive = true;
-    cells[y + 8][x + 3].alive = true;
-    cells[y + 8][x + 4].alive = true;
-    cells[y + 9][x + 3].alive = true;
-  }
 
   if (key == 76) {
     //l
@@ -312,6 +268,17 @@ window.addEventListener("keydown", function(e) {
     cells[y + 20][x + 0].alive = true;
     cells[y + 20][x + 1].alive = true;
     cells[y + 20][x + 4].alive = true;
+  }
+
+  if (key == 82) {
+    //r
+    for (i = 0; i < cells.length; i++) {
+      for (j = 0; j < cells[i].length; j++) {
+        if (Math.random() > 0.6) {
+          cells[i][j].alive = true;
+        }
+      }
+    }
   }
 });
 

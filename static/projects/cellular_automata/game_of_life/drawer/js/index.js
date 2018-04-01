@@ -51,7 +51,18 @@ window.addEventListener("keydown", function(e) {
   let key = e.keyCode;
 
   if (key == 13) {
+    //enter
     run();
+  }
+
+  if (key == 66) {
+    //b
+    window.location.replace("http://localhost:8000/projects/cellular_automata/game_of_life/");
+  }
+
+  if (key == 72) {
+    //h
+    window.location.replace("http://localhost:8000/projects/cellular_automata/game_of_life/help/");
   }
 });
 
